@@ -8,4 +8,8 @@ class Recipe
   def add_ingredient(ingredient, count)
     @ingredients_required[ingredient] += count
   end
+
+  def ingredients
+    @ingredients_required.keys
+  end
 end
