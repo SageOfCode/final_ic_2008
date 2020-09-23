@@ -1,3 +1,10 @@
 class CookBook
+  attr_reader :recipes
+  def initialize
+    @recipes = []
+  end
 
-end 
+  def add_recipe(recipe)
+    @recipes << recipe
+  end
+end
