@@ -15,4 +15,12 @@ class CookBook
       end
     end.flatten.uniq
   end
+
+  def highest_calorie_meal
+    @recipes.max_by do |recipe|
+      recipe.ingredients_required.sum do |ingredient, count|
+      ingredient.calories
+      end
+    end
+  end
 end
